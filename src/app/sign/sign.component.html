@@ -1,0 +1,37 @@
+<div class="login-container">
+    <div  class="login-content">
+      <p class="title">Sign Up</p>
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input  [formControl]="paasswordControl" matInput type="text">
+        <mat-error *ngIf="paasswordControl.hasError('required')">
+          Username is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input  [formControl]="paassword1Control" matInput type="text">
+        <mat-error *ngIf="paasswordControl.hasError('required')">
+          Phone Number is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input  [formControl]="paassword2Control" matInput type="password"> 
+        <mat-error *ngIf="paasswordControl.hasError('required')">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input  [formControl]="paassword3Control" matInput type="password"> 
+        <mat-error *ngIf="paasswordControl.hasError('required')">
+          Confirm Password is required
+        </mat-error>
+      </mat-form-field>
+      <button class="submit-button" mat-raised-button >To register</button>
+      <br/><p class="alternative">Already have an account?<span [routerLink]="['/log']">Sign in</span></p>
+     
+    </div>
+  </div>
+  
